@@ -1,0 +1,217 @@
+.header {
+  color: $white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+  &__wrapper {
+    background-color: $navy;
+    align-self: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .container {
+      margin-left: 80px;
+
+      &__greetings {
+        font-size: 2.3em;
+      }
+
+      &__gpoy {
+        margin: 10px 0;
+
+        img {
+          height: 250px;
+          max-width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border: 4px dashed $navy;
+        z-index: -10;
+      }
+    }
+  }
+
+  &__chat {
+    margin-right: 80px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    align-self: center;
+    height: calc(100% + 60px);
+
+    @include max-width(1170) {
+      position: relative;
+    }
+
+    @include max-width(940) {
+      display: none;
+    }
+  }
+
+  // Arrow styling
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    a {
+      &::before {
+        content: '';
+        height: 0;
+      }
+    }
+  }
+  .arrow span {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-bottom: 4px solid $orange;
+    border-right: 4px solid $orange;
+    transform: rotate(45deg);
+    margin: -5px;
+    animation: animate 1.5s infinite;
+  }
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+  }
+
+  @include max-width(940) {
+    .container {
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
+
+      &__greetings {
+        margin-bottom: 20px;
+      }
+
+      &__gpoy {
+        margin: 20px;
+
+        img {
+          // height: 100%;
+          height: 400px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include max-width(600) {
+    &__wrapper {
+      padding: 0;
+      height: 100%;
+
+      .container {
+        &__greetings {
+          margin: 0;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .arrow {
+      display: none;
+    }
+  }
+
+
+  /* chatbox stuff */
+
+  .chat {
+  width: 320px;
+  font-family: $Plex;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+
+  &__head {
+    background-color: $orange;
+    font-size: 2.4em;
+    color: $white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  &__box {
+    border: 4px solid $orange;
+    padding: 0 10px;
+    background-color: $white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .guest {
+      margin: 15px 0;
+
+      .title {
+        color: $darkTeal;
+      }
+    }
+
+    .title {
+      font-size: 1.8em;
+      // font-weight: bold;
+      font-family: $Plex;
+    }
+
+    .text {
+      color: rgba($navy, 0.8);
+      font-size: 1.92em;
+      margin-left: 10px;
+      font-family: $Plex;
+    }
+
+    .reem {
+      margin: 15px 0;
+
+      .title {
+        color: $navy;
+      }
+    }
+  }
+}

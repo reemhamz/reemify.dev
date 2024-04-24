@@ -1,0 +1,126 @@
+/* Variables */
+/* ------------------------------------- */
+
+/* 1. Colors */
+:root {
+    --white: white;
+    --darkTeal: #006C67;
+    --navy: #1F374C;
+    --orange: #CB7752;
+    --grey: #898b8a;
+}
+
+/* 2. Viewport widths */
+
+/* Header section */
+header {
+    color: var(--red);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
+
+.header-wrapper {
+    background-color: var(--navy);
+    align-self: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    margin-left: 80px;
+    color: var(--white);
+}
+
+.container-greetings {
+    font-size: 20px;
+}
+
+.gpoy {
+    margin: 10px 0;
+}
+
+.gpoy img {
+    height: 250px;
+    max-width: 100;
+}
+
+.container-greetings::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 4px dashed var(--navy);
+    z-index: -10;
+}
+
+/* Chatbox */
+.header-chat {
+    margin-right: 80px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    align-self: center;
+    height: calc(100% + 60px);
+}
+
+.chat {
+    width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.chat-head {
+    background-color: var(--orange);
+    font-size: 2.4em;
+    color: var(--white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.chat-box {
+    border: 4px solid var(--orange);
+    padding: 0 10px;
+    background-color: var(--white);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guest {
+    margin: 15px 0;
+}
+
+.guest .title {
+    color: var(--darkTeal);
+}
+
+.title {
+    color: rgba(var(--navy), 0.8);
+      font-size: 1.92em;
+      margin-left: 10px;
+}
+
+.reem {
+    margin: 15px 0;
+}
+
+.reem .title {
+    color: var(--navy);
+}
