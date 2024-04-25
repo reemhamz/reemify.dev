@@ -1,25 +1,82 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@100..900&family=Sura:wght@400;700&display=swap'); */
+
+/* Fonts */
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf") format(truetype);
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("./fonts/Lora/Lora-VariableFont_wght.ttf")
+    format(truetype);
+}
+
+
+
 /* Variables */
 /* ------------------------------------- */
 
-/* 1. Colors */
 :root {
+    /* 1. Colors */
     --white: white;
     --darkTeal: #006C67;
     --navy: #1F374C;
-    --orange: #CB7752;
+    --olive: #004A2F;
+    --orange: #DE703B;
     --grey: #898b8a;
+
+    /* Fonts */
+    --font-sura: "Sura", Times New Roman, serif;
+    --font-lora: "Lora", Times New Roman, serif;
+    --font-inter: "Inter", system-ui, sans-serif;
+    --text-body-xs: 12px;
+    --text-body-sm: 16px;
+    --text-body-md: 20px;
+    --text-body-lg: 24px;
+    --text-body-xl: 28px;
+    --text-body-2xl: 32px;
+    --text-title-sm: 36px;
+    --text-title-md: 48px;
+    --text-title-lg: 68px;
 }
 
 /* 2. Viewport widths */
 
 /* Header section */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+    font-family: var(--font-lora);
+}
+
+h1 {
+    font-size: var(--text-title-lg);
+    font-weight: 700;
+    margin: 0;
+}
+
+p, ul,
+span, a {
+    font-family: var(--font-inter);
+    font-weight: 300;
+}
+
 header {
     color: var(--red);
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
-
+    /* margin-bottom: 80px; */
+    width: 1140px;
 }
 
 .header-wrapper {
@@ -35,20 +92,32 @@ header {
 
 .header-container {
     margin-left: 80px;
+    padding: 20px 0;
     color: var(--white);
 }
 
 .container-greetings {
-    font-size: 20px;
+    font-size: var(--text-body-md);
 }
 
 .gpoy {
     margin: 10px 0;
 }
 
-.gpoy img {
-    height: 250px;
+.gpoy-image {
+    height: 400px;
     max-width: 100;
+    position: relative;
+}
+
+.tldr {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tldr li {
+    font-size: var(--text-body-md);
+    list-style: none;
 }
 
 .container-greetings::after {
@@ -66,7 +135,6 @@ header {
 .header-chat {
     margin-right: 80px;
     height: 100%;
-    position: absolute;
     right: 0;
     align-self: center;
     height: calc(100% + 60px);
@@ -87,12 +155,21 @@ header {
     color: var(--white);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 5px;
     text-align: center;
 }
 
+.im-title {
+    font-size: var(--text-body-md);
+    font-weight: 500;
+    margin: 0;
+}
+
+.im-title span {
+    font-size: 40px;
+}
+
 .chat-box {
-    border: 4px solid var(--orange);
+    border: 8px solid var(--orange);
     padding: 0 10px;
     background-color: var(--white);
     border-bottom-left-radius: 10px;
@@ -108,13 +185,17 @@ header {
 }
 
 .guest .title {
-    color: var(--darkTeal);
+    color: var(--navy);
 }
 
 .title {
-    color: rgba(var(--navy), 0.8);
-      font-size: 1.92em;
-      margin-left: 10px;
+    font-size: var(--text-body-md);
+    font-weight: 500;
+}
+
+.text {
+    margin: 0 15px;
+    font-weight: 400;
 }
 
 .reem {
@@ -122,5 +203,5 @@ header {
 }
 
 .reem .title {
-    color: var(--navy);
+    color: var(--orange);
 }
