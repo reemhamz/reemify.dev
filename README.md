@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f09978d-0812-4aa9-b62a-a6fcab3d81ad/deploy-status)](https://app.netlify.com/sites/reemify/deploys)
+
 # Personal website
 This is the repository of my personal website, which can be accessed via https://reemify.dev
 
