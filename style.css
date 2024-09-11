@@ -74,7 +74,7 @@ h2 {
 }
 
 p, ul,
-span, a {
+span, a, li {
     font-family: var(--font-inter);
     font-weight: 300;
 }
@@ -116,7 +116,7 @@ header {
     width: 80%;
 }
 
-.header-container{
+.header-container {
     padding: 20px 0;
     color: var(--white);
 }
@@ -234,6 +234,11 @@ header {
 .about p, a {
     font-size: var(--text-body-md);
     color: var(--white);
+}
+
+.funstuff {
+    color: var(--white);
+    text-align: left;
 }
 
 .socials-wrapper {
